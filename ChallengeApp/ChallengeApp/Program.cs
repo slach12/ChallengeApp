@@ -1,4 +1,46 @@
-﻿//var myAge = 38;
+﻿//Praca domowa
+
+string name = "Sławek";
+bool isMale = true;
+int age = 38;
+
+
+Console.WriteLine(name+" lat "+age);
+if (!isMale && age < 30)
+{
+    Console.WriteLine("Kobieta poniżej 30lat");
+} 
+
+if (age==33 && name == "Ewa")
+{
+    Console.WriteLine("Ewa, lat 33");
+}
+
+if(isMale && age < 18)
+{
+    Console.WriteLine("Niepełnoletni mężczyzna");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+//var myAge = 38;
 int myAge = 38;
 myAge = int.MaxValue;
 myAge = 120;
@@ -40,4 +82,4 @@ else
     Console.WriteLine("Jestem tutaj w linni 10");
 }
 
-
+*/
