@@ -1,33 +1,26 @@
-﻿//Praca domowa
+﻿
 
-string name = "Sławek";
-bool isMale = true;
-int age = 38;
+int[] grades = new int[5];
 
+string[] dayOfWeeks = new string[7];
+dayOfWeeks[0] = "Poniedziałek";
+dayOfWeeks[1] = "Wtorek";
+dayOfWeeks[2] = "Środa";
+dayOfWeeks[3] = "Czwartek";
+dayOfWeeks[4] = "Piątek";
+dayOfWeeks[5] = "Sobota";
+dayOfWeeks[6] = "Niedziela";
 
-Console.WriteLine(name + " lat " + age);
-if (!isMale && age < 30)
+Console.WriteLine(dayOfWeeks[2]);
+
+string[] weekdays = { "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela" };
+
+Console.WriteLine(weekdays[0]);
+
+for(int i = 0;i < 10; i++)
 {
-    Console.WriteLine("Kobieta poniżej 30lat");
+    Console.WriteLine(i);
 }
-
-if (age == 33 && name == "Ewa")
-{
-    Console.WriteLine("Ewa, lat 33");
-}
-
-if (isMale && age < 18)
-{
-    Console.WriteLine("Niepełnoletni mężczyzna");
-}
-
-
-if (age == 38 && name == "Sławek")
-{
-    Console.WriteLine("Sławek, lat 38");
-}
-
-
 
 
 
