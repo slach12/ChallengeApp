@@ -2,14 +2,17 @@
 
 int[] grades = new int[5];
 
-string[] dayOfWeeks = new string[7];
-dayOfWeeks[0] = "Poniedziałek";
-dayOfWeeks[1] = "Wtorek";
-dayOfWeeks[2] = "Środa";
-dayOfWeeks[3] = "Czwartek";
-dayOfWeeks[4] = "Piątek";
-dayOfWeeks[5] = "Sobota";
-dayOfWeeks[6] = "Niedziela";
+//string[] dayOfWeeks = new string[7];
+List<string> dayOfWeeks = new List<string>
+{
+    "Poniedziałek",
+    "Wtorek",
+    "Środa",
+    "Czwartek",
+    "Piątek",
+    "Sobota",
+    "Niedziela"
+};
 
 Console.WriteLine(dayOfWeeks[2]);
 
@@ -17,11 +20,15 @@ string[] weekdays = { "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek"
 
 Console.WriteLine(weekdays[0]);
 
-for(int i = 0;i < 10; i++)
+/*for(int i = 0;i < dayOfWeeks.Count; i++)
 {
-    Console.WriteLine(i);
+    Console.WriteLine(dayOfWeeks[i]);
 }
+*/
 
-
+foreach(var day in dayOfWeeks)
+{
+    Console.WriteLine(day);
+}
 
 
