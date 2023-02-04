@@ -42,10 +42,8 @@ foreach (char c in letters)
             break;
     }
 }
-
 Console.WriteLine("Praca domowa");
 Console.WriteLine($"Wynik dla liczby : {number}");
-
 for(int index =0; index<digits.Length;index++)
 {
    Console.WriteLine($"{index} => {digits[index]}");
