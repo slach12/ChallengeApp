@@ -3,8 +3,6 @@
 int number  = 4566;
 string numberInString = number.ToString();
 char[] letters = numberInString.ToCharArray();
-Console.WriteLine(numberInString);
-Console.WriteLine(letters);
 int[] digits = new int[10];
 
 
