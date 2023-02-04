@@ -7,8 +7,7 @@ int[] digits = new int[10];
 
 
 foreach (char c in letters)
-{
-    Console.WriteLine(c);   
+{  
     switch (c)
     {
         case '0':
