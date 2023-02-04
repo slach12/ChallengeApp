@@ -7,10 +7,7 @@ Console.WriteLine(numberInString);
 Console.WriteLine(letters);
 int[] digits = new int[10];
 
-for(int i = 0; i<digits.Length;i++)
-{
-    Console.WriteLine(digits[i]);
-}
+
 foreach (char c in letters)
 {
     Console.WriteLine(c);   
