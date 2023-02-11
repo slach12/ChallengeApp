@@ -6,11 +6,19 @@ User user3 = new User("Damian");
 User user4 = new User("Monika");
 
 user1.AddScore(5);
+user1.AddScore(2);
+var result = user1.Result;
+Console.WriteLine(result);
+var name = User.GameName;
+var pi = Math.PI;
+
 
 
 class User
 {
     //private int score =0;
+
+    public static string GameName = "Diablo";
 
     private List<int> score = new List<int>();
     
@@ -32,6 +40,13 @@ class User
     public User(string login, string pasword) {
         Login = login;
         Password = pasword;
+    }
+
+    public int Result { 
+        get {
+            return this.score.Sum();
+        } 
+    
     }
 
     public void AddScore(int number)

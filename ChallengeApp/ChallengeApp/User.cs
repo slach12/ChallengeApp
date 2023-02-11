@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ChallengeApp
 {
-    internal class User
+    public class User
     {
     }
 }
