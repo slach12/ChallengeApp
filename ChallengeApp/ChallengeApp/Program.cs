@@ -1,58 +1,33 @@
 ﻿using System.Globalization;
+using ChallengeApp;
 
-User user1 = new User("Adam");
-User user2 = new User("Zuzia");
-User user3 = new User("Damian");
-User user4 = new User("Monika");
+User user1 = new User("Sławek",38);
+User user2 = new User("Piotrek",32);
+User user3 = new User("Adam",30);
 
-user1.AddScore(5);
+user1.AddScore(1);
 user1.AddScore(2);
-var result = user1.Result;
-Console.WriteLine(result);
-var name = User.GameName;
-var pi = Math.PI;
+user1.AddScore(3);
+user2.AddScore(4);
+user2.AddScore(5);
+user2.AddScore(6);
+user3.AddScore(7);
+user3.AddScore(8);
+user3.AddScore(9);
 
 
+List<User> users = new List<User>();
+users.Add(user1);
+users.Add(user2);
+users.Add(user3);
 
-class User
+var bestUser = user1;
+foreach(var user in users)
 {
-    //private int score =0;
-
-    public static string GameName = "Diablo";
-
-    private List<int> score = new List<int>();
-    
-
-    public string Login { get; private set; }
-    public string Password { get; private set; }
-
-
-    public User()
+  if (user.Result> bestUser.Result)
     {
-        this.Login = "-";
-        this.Password = "-";
-            
-    }
-    public User(string loign)
-    {
-        Login = loign;
-    }
-    public User(string login, string pasword) {
-        Login = login;
-        Password = pasword;
-    }
-
-    public int Result { 
-        get {
-            return this.score.Sum();
-        } 
-    
-    }
-
-    public void AddScore(int number)
-    {
-        this.score.Add(number);
-    }
-
+        bestUser = user;
+    } 
 }
+Console.WriteLine($"Najlepszy wynik ma użytkownik {bestUser.Name} : {bestUser.Result} punkty.");
 

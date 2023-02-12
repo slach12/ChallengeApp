@@ -8,5 +8,23 @@ namespace ChallengeApp
 {
     public class User
     {
+        public User(string name,  int age) {
+            this.Name = name;    
+            this.Age = age;
+        }   
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public int Age { get; set; }
+        public List<int> scores = new List<int>();
+        public void AddScore(int number)
+        {
+            this.scores.Add(number);
+        }
+        public int Result { 
+           get
+            {
+                return this.scores.Sum();
+            } 
+        }
     }
 }
