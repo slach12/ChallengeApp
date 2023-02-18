@@ -20,6 +20,11 @@ namespace ChallengeApp
         {
             this.scores.Add(number);
         }
+
+        public void RemoveScore(int number)
+        {
+            this.scores.Remove(number);
+        }
         public int Result { 
            get
             {
