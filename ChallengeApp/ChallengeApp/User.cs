@@ -11,7 +11,14 @@ namespace ChallengeApp
         public User(string name,  int age) {
             this.Name = name;    
             this.Age = age;
-        }   
+        }
+
+        public User(string name)
+        {
+            this.Name = name;
+            this.Age = 0;
+        }
+        public string Login { get { return Name; } }
         public string Name { get; set; }
         public string Surname { get; set; }
         public int Age { get; set; }
