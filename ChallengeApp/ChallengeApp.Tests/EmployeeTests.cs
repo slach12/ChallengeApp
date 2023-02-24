@@ -32,7 +32,6 @@ namespace ChallengeApp.Tests
 
             //assert
             Assert.AreEqual(max, statistic.Max);
-
         }
 
         [Test]
