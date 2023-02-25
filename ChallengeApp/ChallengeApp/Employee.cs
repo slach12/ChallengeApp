@@ -82,7 +82,6 @@ namespace ChallengeApp
             return statistics;
         }
 
-
         public Statistics GetStatisticsWithDoWhile()
         {
             var statistics = new Statistics();
@@ -95,9 +94,7 @@ namespace ChallengeApp
                 statistics.Max = Math.Max(statistics.Max, grades[index]);
                 statistics.Min = Math.Min(statistics.Min, grades[index]);
                 statistics.Average += grades[index];
-
                 index++;
-
             } while (index < this.grades.Count);
             statistics.Average /= this.grades.Count;
             return statistics;  
