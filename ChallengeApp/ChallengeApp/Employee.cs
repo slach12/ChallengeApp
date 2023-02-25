@@ -22,7 +22,6 @@ namespace ChallengeApp
             this.AddGrades((float)grade);
         }
 
-
         public void AddGrades(int grade)
         {
             this.AddGrades((float)grade);
@@ -35,7 +34,7 @@ namespace ChallengeApp
 
         public void AddGrades(double grade)
         {
-            this.AddGrades(grade);
+            this.AddGrades((float)grade);
 
         }
 
