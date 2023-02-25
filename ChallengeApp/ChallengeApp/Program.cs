@@ -6,6 +6,8 @@ employee.AddGrades(2000);
 
 employee.AddGrades(2);
 employee.AddGrades(6);
+employee.AddGrades(7L);
+
 
 var statistics = employee.GetStatistics();
 

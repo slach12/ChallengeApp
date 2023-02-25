@@ -17,9 +17,30 @@ namespace ChallengeApp
            this.Surname = surname;  
         }
 
+        public void AddGrades(long grade)
+        {
+            this.AddGrades((float)grade);
+        }
+
+
+        public void AddGrades(int grade)
+        {
+            this.AddGrades((float)grade);
+        }
+
+        public void AddGrades(decimal grade)
+        {
+            this.AddGrades((float)grade);
+        }
+
+        public void AddGrades(double grade)
+        {
+            this.AddGrades(grade);
+
+        }
+
         public void AddGrades(float grade)
         {
-            int ValueInInt = (int)grade;
             if (grade >= 0 && grade <= 100 )
             {
                 this.grades.Add(grade);
