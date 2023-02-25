@@ -19,10 +19,10 @@ namespace ChallengeApp.Tests
             float score2 = 6;
             float score3 = 7;
             float score4 = 8;
-            user.AddGrades(score1);
-            user.AddGrades(score2);
-            user.AddGrades(score3);
-            user.AddGrades(score4);
+            user.AddGrade(score1);
+            user.AddGrade(score2);
+            user.AddGrade(score3);
+            user.AddGrade(score4);
 
             //act
             Statistics statistic = user.GetStatistics();
@@ -44,10 +44,10 @@ namespace ChallengeApp.Tests
             float score2 = 6;
             float score3 = 7;
             float score4 = 8;
-            user.AddGrades(score1);
-            user.AddGrades(score2);
-            user.AddGrades(score3);
-            user.AddGrades(score4);
+            user.AddGrade(score1);
+            user.AddGrade(score2);
+            user.AddGrade(score3);
+            user.AddGrade(score4);
 
             //act
             Statistics statistic = user.GetStatistics();
@@ -67,8 +67,8 @@ namespace ChallengeApp.Tests
               
             float score1 = 5;
             float score2 = 6;
-            user.AddGrades(score1);
-            user.AddGrades(score2);
+            user.AddGrade(score1);
+            user.AddGrade(score2);
 
             //act
             Statistics statistic = user.GetStatistics();

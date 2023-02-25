@@ -19,28 +19,28 @@ namespace ChallengeApp
            this.Surname = surname;  
         }
 
-        public void AddGrades(long grade)
+        public void AddGrade(long grade)
         {
-            this.AddGrades((float)grade);
+            this.AddGrade((float)grade);
         }
 
-        public void AddGrades(int grade)
+        public void AddGrade(int grade)
         {
-            this.AddGrades((float)grade);
+            this.AddGrade((float)grade);
         }
 
-        public void AddGrades(decimal grade)
+        public void AddGrade(decimal grade)
         {
-            this.AddGrades((float)grade);
+            this.AddGrade((float)grade);
         }
 
-        public void AddGrades(double grade)
+        public void AddGrade(double grade)
         {
-            this.AddGrades((float)grade);
+            this.AddGrade((float)grade);
 
         }
 
-        public void AddGrades(float grade)
+        public void AddGrade(float grade)
         {
             if (grade >= 0 && grade <= 100 )
             {
@@ -52,15 +52,45 @@ namespace ChallengeApp
             }
             
         }
-        public void AddGrades(string grade)
+        public void AddGrade(string grade)
         {
             if(float.TryParse(grade,out float result))
             {
-                this.AddGrades(result);
+                this.AddGrade(result);
             }
             else
             {
                 Console.WriteLine("String is not float.");
+            }
+        }
+
+        public void AddGrade(char grade)
+        {
+            switch (grade)
+            {
+                case 'A':
+                case 'a':
+                    this.grades.Add(100);
+                    break;
+                case 'B':
+                case 'b':
+                    this.grades.Add(80);
+                    break;
+                case 'C':
+                case 'c':
+                    this.grades.Add(60);
+                    break;
+                case 'D':
+                case 'd':
+                    this.grades.Add(40);
+                    break;
+                case 'E':
+                case 'e':
+                    this.grades.Add(20);
+                    break;
+                default:
+                    Console.WriteLine("Wrong letter.");
+                    break;
             }
         }
 

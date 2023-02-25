@@ -2,14 +2,15 @@
 
 
 var employee = new Employee("Sławek", "Łach");
-employee.AddGrades(2000);
+employee.AddGrade(2000);
 
-employee.AddGrades(2);
-employee.AddGrades(6);
-employee.AddGrades(7L);
-employee.AddGrades(45M);
-employee.AddGrades("34");
-employee.AddGrades(12.33);
+employee.AddGrade(2);
+employee.AddGrade(6);
+employee.AddGrade(7L);
+employee.AddGrade(45M);
+employee.AddGrade("34");
+employee.AddGrade(12.33);
+employee.AddGrade('C');
 
 
 
