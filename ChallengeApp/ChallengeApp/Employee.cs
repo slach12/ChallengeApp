@@ -19,8 +19,29 @@ namespace ChallengeApp
 
         public void AddGrades(float grade)
         {
-            this.grades.Add(grade);
+            int ValueInInt = (int)grade;
+            if (grade >= 0 && grade <= 100 )
+            {
+                this.grades.Add(grade);
+            }
+            else
+            {
+                Console.WriteLine("Invalid grade value.");
+            }
+            
         }
+        public void AddGrades(string grade)
+        {
+            if(float.TryParse(grade,out float result))
+            {
+                this.AddGrades(result);
+            }
+            else
+            {
+                Console.WriteLine("String is not float.");
+            }
+        }
+
 
         public Statistics GetStatistics()
         {

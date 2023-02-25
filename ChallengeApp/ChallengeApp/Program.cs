@@ -2,7 +2,7 @@
 
 
 var employee = new Employee("Sławek", "Łach");
-employee.AddGrades(2);
+employee.AddGrades(2000);
 
 employee.AddGrades(2);
 employee.AddGrades(6);
