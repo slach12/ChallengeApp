@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -70,11 +72,32 @@ namespace ChallengeApp
             statistics.Max = float.MinValue;
             statistics.Min = float.MaxValue;
 
+            /*           var index = 0;
+                       while (index < this.grades.Count) 
+                       {
+                           statistics.Max = Math.Max(statistics.Max, grades[index]);
+                           statistics.Min = Math.Min(statistics.Min, grades[index]);
+                           statistics.Average += grades[index];
+                           index++;
+                       } 
+           */
+            /*   var index = 0;
+               do
+               {
+                   statistics.Max = Math.Max(statistics.Max, grades[index]);
+                   statistics.Min = Math.Min(statistics.Min, grades[index]);
+                   statistics.Average += grades[index];
+
+                   index++;
+
+               } while (index< this.grades.Count);
+   */
+
             foreach (var grade in this.grades)
             {
                 statistics.Max = Math.Max(statistics.Max, grade);
                 statistics.Min = Math.Min(statistics.Min, grade);
-                statistics.Average+= grade;
+                statistics.Average += grade;
             }
 
             statistics.Average/= this.grades.Count;
