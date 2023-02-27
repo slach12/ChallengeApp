@@ -13,6 +13,10 @@ namespace ChallengeApp
         private List<float> grades = new List<float>();
         public string Name { get; private set; }
         public string Surname { get; private set; }
+        public  Employee()
+        {
+            //
+        }
         public Employee(string name, string surname)
         {
            this.Name = name;
@@ -175,6 +179,27 @@ namespace ChallengeApp
                 statistics.Average += grade;
             }
             statistics.Average/= this.grades.Count;
+            statistics.AverageLetter = 'A';
+
+            switch (statistics.Average)
+            {
+                case var a when a >= 80:
+                    statistics.AverageLetter = 'A';
+                    break;
+                case var a when a >= 60:
+                    statistics.AverageLetter = 'B';
+                    break;
+                case var a when a >= 40:
+                    statistics.AverageLetter = 'C';
+                    break;
+                case var a when a >= 20:
+                    statistics.AverageLetter = 'D';
+                    break;
+                default:
+                    statistics.Average = 'E';
+                    break;
+            }
+
             return statistics;
         }
     }
