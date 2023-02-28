@@ -196,7 +196,7 @@ namespace ChallengeApp
                     statistics.AverageLetter = 'D';
                     break;
                 default:
-                    statistics.Average = 'E';
+                    statistics.AverageLetter = 'E';
                     break;
             }
 

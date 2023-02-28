@@ -78,5 +78,29 @@ namespace ChallengeApp.Tests
             Assert.AreEqual(avg, statistic.Average);
 
         }
+
+        [Test]
+        public void ShouldReturnProperAverageLetter()
+        {
+            //arrange
+            var user = new Employee("Sławek", "Łach");
+
+            float score1 = 60;
+            float score2 = 66;
+            float score3 = 79;
+            user.AddGrade(score1);
+            user.AddGrade(score2);
+            user.AddGrade(score3);
+
+
+            //act
+            Statistics statistic = user.GetStatistics();
+            var avg = 'B';
+                
+            //assert
+            Assert.AreEqual(avg, statistic.AverageLetter);
+
+        }
+
     }
 }
