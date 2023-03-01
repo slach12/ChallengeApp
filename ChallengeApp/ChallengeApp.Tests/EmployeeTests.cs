@@ -69,11 +69,9 @@ namespace ChallengeApp.Tests
             float score2 = 6;
             user.AddGrade(score1);
             user.AddGrade(score2);
-
             //act
             Statistics statistic = user.GetStatistics();
             float avg = (score1 + score2)/2;
-
             //assert
             Assert.AreEqual(avg, statistic.Average);
 
@@ -91,15 +89,11 @@ namespace ChallengeApp.Tests
             user.AddGrade(score1);
             user.AddGrade(score2);
             user.AddGrade(score3);
-
-
             //act
             Statistics statistic = user.GetStatistics();
             var avg = 'B';
-                
             //assert
             Assert.AreEqual(avg, statistic.AverageLetter);
-
         }
 
     }

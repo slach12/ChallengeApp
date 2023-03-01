@@ -5,6 +5,19 @@ Console.WriteLine("===========================================");
 Console.WriteLine();
 
 var employee = new Employee();
+try
+{
+    Employee emp = null;
+ //  var name = emp.Surname;
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Tego nie powinno być. {ex.Message}");
+}
+finally
+{
+    Console.WriteLine("Finally is here.");
+}
 while (true)
 {
     Console.WriteLine("Podaj kolejną ocenę pracownika: ");
@@ -13,7 +26,15 @@ while (true)
     {
         break;
     }
-    employee.AddGrade(input);
+
+    try
+    { 
+        employee.AddGrade(input); 
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Exception catched: {ex.Message}");
+    }
 }
 
 var statistics = employee.GetStatistics();
