@@ -10,6 +10,7 @@ namespace ChallengeApp
 {
     public class Employee
     {
+        private readonly char sex = 'M'; 
         private List<float> grades = new List<float>();
         public string Name { get; private set; }
         public string Surname { get; private set; }
@@ -20,7 +21,8 @@ namespace ChallengeApp
         public Employee(string name, string surname)
         {
            this.Name = name;
-           this.Surname = surname;  
+           this.Surname = surname;
+            this.sex = 'K';
         }
 
         public void AddGrade(long grade)
