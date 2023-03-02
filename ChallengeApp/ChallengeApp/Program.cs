@@ -8,7 +8,6 @@ var employee = new Employee();
 try
 {
     Employee emp = null;
- //  var name = emp.Surname;
 }
 catch (Exception ex)
 {

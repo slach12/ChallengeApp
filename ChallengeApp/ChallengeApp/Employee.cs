@@ -55,7 +55,6 @@ namespace ChallengeApp
             else
             {
                 throw new Exception("Invalid grade value.");
-               // Console.WriteLine("Invalid grade value.");
             }
             
         }
@@ -68,7 +67,6 @@ namespace ChallengeApp
             else
             {
                 throw new Exception("String is not float.");
-              //  Console.WriteLine("String is not float.");
             }
         }
 
@@ -98,7 +96,6 @@ namespace ChallengeApp
                     break;
                 default:
                     throw new Exception("Wrong letter.");
-                    //Console.WriteLine("Wrong letter.");
             }
         }
 
