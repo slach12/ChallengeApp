@@ -12,8 +12,7 @@ namespace ChallengeApp
     {
        
         private List<float> grades = new List<float>();
-        private readonly char sex = 'M';
-        public string Surname { get; private set; }
+
         public  Employee()
             :this("no name")
         {
@@ -25,11 +24,15 @@ namespace ChallengeApp
 
         }
         public Employee(string name, string surname)
-            :base(name)
+                    : this(name, surname, 'X')
+        {
+
+        }
+
+        public Employee(string name, string surname, char sex)
+            :base(name,surname, sex)
         {
  
-           this.Surname = surname;
-            this.sex = 'K';
         }
 
         public void AddGrade(long grade)
