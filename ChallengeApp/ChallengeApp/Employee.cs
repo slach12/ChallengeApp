@@ -8,32 +8,43 @@ using System.Threading.Tasks;
 
 namespace ChallengeApp
 {
-    public class Employee : Person
+    public class Employee : IEmployee 
+     //   Person 
     {
        
         private List<float> grades = new List<float>();
 
-        public  Employee()
-            :this("no name")
-        {
-            //
-        }
-        public Employee(string name)
-          : this(name,"no surname")
-        {
-
-        }
+        public string Name { get; private set; }
+        public string Surname { get; private set; } 
         public Employee(string name, string surname)
-                    : this(name, surname, 'X')
+                  
         {
-
+            this.Name = name;
+            this.Surname = surname;
         }
 
-        public Employee(string name, string surname, char sex)
-            :base(name,surname, sex)
-        {
- 
-        }
+
+        /*     public  Employee()
+                 :this("no name")
+             {
+                 //
+             }
+             public Employee(string name)
+               : this(name,"no surname")
+             {
+
+             }
+             public Employee(string name, string surname)
+                         : this(name, surname, 'X')
+             {
+
+             }
+
+             public Employee(string name, string surname, char sex)
+                 : base(name, surname, sex)
+             {
+
+             }*/
 
         public void AddGrade(long grade)
         {
