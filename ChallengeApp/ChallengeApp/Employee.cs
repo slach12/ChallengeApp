@@ -22,6 +22,16 @@ namespace ChallengeApp
             this.Name = name;
             this.Surname = surname;
         }
+        public Employee()
+               : this("no name")
+        {
+            //
+        }
+        public Employee(string name)
+          : this(name, "no surname")
+        {
+
+        }
 
 
         /*     public  Employee()
