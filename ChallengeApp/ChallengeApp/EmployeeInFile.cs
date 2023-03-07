@@ -10,10 +10,13 @@ namespace ChallengeApp
 {
     public class EmployeeInFile : EmployeeBase
     {
-        private const string fileName = "grades.txt";
+        private readonly string fileName = "grades.txt";
         public EmployeeInFile(string name, string surname) 
             : base(name, surname)
         {
+            fileName ="grades "+ name + ' ' + surname+ ".txt";
+
+
         }
 
         public override void AddGrade(long grade)
