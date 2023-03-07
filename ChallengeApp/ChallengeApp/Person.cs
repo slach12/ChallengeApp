@@ -2,9 +2,10 @@
 {
     public abstract class Person : System.Object
     {
+        protected string Surname { get; private set; }
         protected string Name { get; private set; }
         protected  char Sex { get; private set; }
-        protected string Surname { get; private set; }
+      
 
         protected int counter;
    

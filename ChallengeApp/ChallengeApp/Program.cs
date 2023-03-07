@@ -4,7 +4,16 @@ Console.WriteLine("Witamy w programie XYZ do oceny pracowników");
 Console.WriteLine("===========================================");
 Console.WriteLine();
 
-var employee = new Employee();
+var emInFile = new EmployeeInFile("Sławek", "Łach");
+emInFile.AddGrade(2.4f);
+emInFile.AddGrade(3.4f);
+emInFile.AddGrade(2.6f);
+
+var statistics = emInFile.GetStatistics();
+Console.WriteLine($"Average : {statistics.Average}");
+Console.WriteLine($"Min : {statistics.Min}");
+Console.WriteLine($"Max : {statistics.Max}");
+
 try
 {
     Employee emp = null;
@@ -17,7 +26,7 @@ finally
 {
     Console.WriteLine("Finally is here.");
 }
-while (true)
+/*while (true)
 {
     Console.WriteLine("Podaj kolejną ocenę pracownika: ");
     var input = Console.ReadLine();
@@ -39,4 +48,4 @@ while (true)
 var statistics = employee.GetStatistics();
 Console.WriteLine($"Average : {statistics.Average}");
 Console.WriteLine($"Min : {statistics.Min}"); 
-Console.WriteLine($"Max : {statistics.Max}");
+Console.WriteLine($"Max : {statistics.Max}");*/
