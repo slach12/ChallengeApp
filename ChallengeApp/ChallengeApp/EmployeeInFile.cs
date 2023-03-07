@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -108,9 +109,12 @@ namespace ChallengeApp
                     var line = reader.ReadLine();
                     while (line != null)
                     {
-                        var number = float.Parse(line);
-                        line = reader.ReadLine();
+                        var grade = float.Parse(line);
+                        statistics.Max = Math.Max(statistics.Max, grade);
+                        statistics.Min = Math.Min(statistics.Min, grade);
+                        statistics.Average += grade;
                         aCount++;
+                        line = reader.ReadLine();
                     }
                 }
             }
