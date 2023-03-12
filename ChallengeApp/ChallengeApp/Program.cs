@@ -14,6 +14,20 @@ Console.WriteLine($"Average : {statistics.Average}");
 Console.WriteLine($"Min : {statistics.Min}");
 Console.WriteLine($"Max : {statistics.Max}");
 
+var EmpInMem = new EmployeeInMemory("Sławek", "Łach");
+EmpInMem.GradeAdded += EmpInMem_GradeAdded;
+EmpInMem.GradeAdded += EmpInMem_GradeAdded;
+EmpInMem.GradeAdded += EmpInMem_GradeAdded;
+
+EmpInMem.AddGrade(0.6f);
+EmpInMem.GradeAdded -= EmpInMem_GradeAdded;
+EmpInMem.AddGrade(0.6f);
+
+void EmpInMem_GradeAdded(object sender, EventArgs e)
+{
+    Console.WriteLine("Dodano nową ocenę.");
+}
+
 try
 {
     Employee emp = null;

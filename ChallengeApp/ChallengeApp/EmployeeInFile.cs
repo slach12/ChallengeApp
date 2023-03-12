@@ -97,7 +97,75 @@ namespace ChallengeApp
             }
         }
 
+        private List<float> ReadGradesFromFile()
+        {
+            var grades = new List<float>();
+            if (File.Exists(fileName))
+            {
+                using (var reader = File.OpenText(fileName))
+                {
+                    var line = reader.ReadLine();   
+                    while (line != null)
+                    {
+                        var number = float.Parse(line);
+                        grades.Add(number);
+                        line = reader.ReadLine();
+                    }
+                }
+            }
+
+            return grades;
+        }
+
+        private Statistics CountStatistics(List<float> grades)
+        {
+            var statistics = new Statistics();
+            statistics.Average = 0;
+            statistics.Min = float.MaxValue;
+            statistics.Max = float.MinValue;
+            foreach (var grade in grades)
+            {
+                if (grade >=0)
+                {
+                    statistics.Average += grade;
+                    statistics.Min = Math.Min(statistics.Min, grade);
+                    statistics.Max = Math.Max(statistics.Max, grade);
+                }
+
+                statistics.Average /= grades.Count;
+
+            }
+            switch (statistics.Average)
+            {
+                case var a when a >= 80:
+                    statistics.AverageLetter = 'A';
+                    break;
+                case var a when a >= 60:
+                    statistics.AverageLetter = 'B';
+                    break;
+                case var a when a >= 40:
+                    statistics.AverageLetter = 'C';
+                    break;
+                case var a when a >= 20:
+                    statistics.AverageLetter = 'D';
+                    break;
+                default:
+                    statistics.AverageLetter = 'E';
+                    break;
+            }
+
+            return statistics;
+        }
+
         public override Statistics GetStatistics()
+        {
+            var gradesFromFile = this.ReadGradesFromFile();
+            var result = this.CountStatistics(gradesFromFile);
+
+            return result;
+        }
+
+        public  Statistics GetStatistics_Old()
         {
             var statistics = new Statistics();
             var aCount = 0;
