@@ -47,6 +47,7 @@ namespace ChallengeApp
                 if (grade >= 0 && grade <= 100)
                 {
                     writer.WriteLine(grade);
+                   base.AddGrade(grade);
                 }
                 else
                 {

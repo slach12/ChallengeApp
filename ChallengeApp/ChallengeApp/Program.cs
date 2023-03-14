@@ -25,7 +25,7 @@ EmpInMem.AddGrade(0.6f);
 
 void EmpInMem_GradeAdded(object sender, EventArgs e)
 {
-    Console.WriteLine("Dodano nową ocenę.");
+    Console.WriteLine($"Dodano nową ocenę : {e.ToString()}");
 }
 
 try
