@@ -11,6 +11,7 @@ namespace ChallengeApp
     public class EmployeeInFile : EmployeeBase
     {
         private readonly string fileName = "grades.txt";
+        public override event GradeAddedDelegate GradeAdded;
         public EmployeeInFile(string name, string surname) 
             : base(name, surname)
         {
@@ -41,20 +42,24 @@ namespace ChallengeApp
 
         public override void AddGrade(float grade)
         {
-            using (var writer = File.AppendText(fileName))
-            {
-
                 if (grade >= 0 && grade <= 100)
                 {
-                    writer.WriteLine(grade);
-                   base.AddGrade(grade);
+                    using (var writer = File.AppendText(fileName))
+                    { 
+                        writer.WriteLine(grade); 
+                    }
+
+                    if(GradeAdded != null)
+                    {
+                        GradeAdded(this, new EventArgs());
+                    }
+                    
+                  
                 }
                 else
                 {
                     throw new Exception("Invalid grade value.");
                 }
-                ;
-            }
         }
 
         public override void AddGrade(string grade)

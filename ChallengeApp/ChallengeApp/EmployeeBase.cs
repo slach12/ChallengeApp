@@ -11,7 +11,7 @@ namespace ChallengeApp
 
         public delegate void GradeAddedDelegate(object sender, EventArgs e);
 
-        public event GradeAddedDelegate GradeAdded;
+        public abstract event GradeAddedDelegate GradeAdded;
 
         public string Surname { get; private set; }
         public string Name { get; private set; }
@@ -31,16 +31,10 @@ namespace ChallengeApp
         public abstract void AddGrade(decimal grade);
 
         public abstract void AddGrade(double grade);
+
+
+        public abstract void AddGrade(float grade);
         
-
-        public virtual void AddGrade(float grade)
-        {
-            if (GradeAdded != null)
-            {
-                GradeAdded(this, new EventArgs());
-            }
-        }
-
         public abstract void AddGrade(string grade);
 
         public abstract void AddGrade(char grade);

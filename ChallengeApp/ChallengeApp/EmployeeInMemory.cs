@@ -8,12 +8,8 @@ namespace ChallengeApp
 {
     public class EmployeeInMemory : EmployeeBase
     {
-       
+        public override event GradeAddedDelegate GradeAdded;
 
-/*        public delegate void GradeAddedDelegate(object sender, EventArgs e);
-    
-        public event GradeAddedDelegate GradeAdded;
-*/
 
         private List<float> grades = new List<float>();
         public EmployeeInMemory(string name, string surname) 
@@ -29,12 +25,11 @@ namespace ChallengeApp
             if (grade >= 0 && grade <= 100)
             {
                 this.grades.Add(grade);
-               
-                base.AddGrade(grade);
-             /*   if (GradeAdded!= null)
+                if (GradeAdded != null)
                 {
                     GradeAdded(this, new EventArgs());
-                }*/
+                }
+
             }
             else
             {

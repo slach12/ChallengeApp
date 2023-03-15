@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static ChallengeApp.EmployeeBase;
 
 namespace ChallengeApp
 {
     public class Supervisor : IEmployee
     {
         public string Name => throw new NotImplementedException();
+
+        public override event GradeAddedDelegate GradeAdded;
 
         public void AddGrade(long grade)
         {
