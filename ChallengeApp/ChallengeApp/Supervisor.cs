@@ -7,38 +7,41 @@ using static ChallengeApp.EmployeeBase;
 
 namespace ChallengeApp
 {
-    public class Supervisor : IEmployee
+    public class Supervisor : EmployeeBase
     {
+        public Supervisor(string name, string surname) : base(name, surname)
+        {
+        }
+
         public string Name => throw new NotImplementedException();
 
-        public override event GradeAddedDelegate GradeAdded;
-
-        public void AddGrade(long grade)
+   
+        public override void AddGrade(long grade)
         {
             throw new NotImplementedException();
         }
 
-        public void AddGrade(int grade)
+        public override void AddGrade(int grade)
         {
             throw new NotImplementedException();
         }
 
-        public void AddGrade(decimal grade)
+        public override void AddGrade(decimal grade)
         {
             throw new NotImplementedException();
         }
 
-        public void AddGrade(double grade)
+        public override void AddGrade(double grade)
         {
             throw new NotImplementedException();
         }
 
-        public void AddGrade(float grade)
+        public override void AddGrade(float grade)
         {
             throw new NotImplementedException();
         }
 
-        public void AddGrade(string grade)
+        public override void AddGrade(string grade)
         {
            
            switch(grade) { 
@@ -93,7 +96,7 @@ namespace ChallengeApp
             }
         }
 
-        public void AddGrade(char grade)
+        public override void AddGrade(char grade)
         {
             throw new NotImplementedException();
         }

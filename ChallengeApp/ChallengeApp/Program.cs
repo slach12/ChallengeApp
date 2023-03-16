@@ -30,7 +30,7 @@ void EmpInMem_GradeAdded(object sender, EventArgs e)
 
 try
 {
-    Employee emp = null;
+    EmployeeInMemory emp = null;
 }
 catch (Exception ex)
 {
